@@ -1,4 +1,6 @@
 import { useState, useRef } from "react";
+import Head from "next/head";
+
 
 const EMPTY_ORDER = {
   customer_name: "", address: "", phone: "", customer_id: "",
@@ -89,9 +91,18 @@ export default function Home() {
 
   return (
     <div className="page">
+      <Head>
+        <title>Order Intake</title>
+      </Head>
+
       <div className="header">
-        <h1>Order Intake</h1>
-        <p>Upload a PDF, scan, WhatsApp photo, or CSV — check the details, send it to the sheet.</p>
+        <div className="brand">
+          <img src="/icon-192.png" alt="" className="brand-mark" />
+          <div>
+            <h1>Order Intake</h1>
+            <p>Upload a PDF, scan, WhatsApp photo, or CSV — check the details, send it to the sheet.</p>
+          </div>
+        </div>
       </div>
 
       <label className="dropzone">
